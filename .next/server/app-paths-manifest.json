@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/deneyimler/page": "app/deneyimler/page.js",
+  "/page": "app/page.js",
+  "/egitimlerimiz/[slug]/page": "app/egitimlerimiz/[slug]/page.js",
+  "/neden-yazilim/page": "app/neden-yazilim/page.js",
+  "/egitimlerimiz/page": "app/egitimlerimiz/page.js",
+  "/biz-kimiz/page": "app/biz-kimiz/page.js"
+}
