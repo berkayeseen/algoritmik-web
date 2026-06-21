@@ -2,12 +2,108 @@ import { notFound } from 'next/navigation';
 import { egitimler } from '@/data/egitimler';
 import { CheckCircle2, BookOpenText, Target, LayoutDashboard, AlertCircle } from 'lucide-react';
 
+// 🔍 SEO — Dinamik metadata oluşturma
+// Her eğitim sayfası için benzersiz title, description ve canonical URL üretir.
+// Google her eğitimi ayrı bir sayfa olarak indeksler.
+export async function generateMetadata({ params }) {
+  const egitim = egitimler.find((e) => e.slug === params.slug);
+  if (!egitim) return {};
+
+  return {
+    title: `${egitim.baslik} — Birebir Özel Eğitim`,
+    description: `${egitim.amaci} ${egitim.baslik} eğitimi hakkında detaylı bilgi, müfredat ve kazanımlar.`,
+    alternates: {
+      canonical: `https://algoritmik.com/egitimlerimiz/${egitim.slug}`,
+    },
+    openGraph: {
+      title: `${egitim.baslik} | Algoritmik Eğitim`,
+      description: egitim.amaci,
+      url: `https://algoritmik.com/egitimlerimiz/${egitim.slug}`,
+    },
+  };
+}
+
+// 🔍 SEO — Build anında tüm eğitim slug'larını statik olarak üretir.
+// Sayfa ilk ziyarette anında yüklenir (SSG).
+export async function generateStaticParams() {
+  return egitimler.map((egitim) => ({
+    slug: egitim.slug,
+  }));
+}
+
+// 🔍 SEO — Course Schema (JSON-LD)
+// Google'da "Kurs" zengin sonuçları olarak görünmesini sağlar.
+function CourseJsonLd({ egitim }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: egitim.baslik,
+    description: egitim.amaci,
+    url: `https://algoritmik.com/egitimlerimiz/${egitim.slug}`,
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Algoritmik',
+      url: 'https://algoritmik.com',
+    },
+    educationalLevel: egitim.onKosu ? 'İleri Seviye' : 'Başlangıç',
+    teaches: egitim.konular.map((k) => k.baslik).join(', '),
+    inLanguage: 'tr',
+    courseMode: ['Yüz yüze', 'Online'],
+    // BreadcrumbList — Google arama sonuçlarında navigasyon yolu gösterir
+    hasPart: egitim.konular.map((konu) => ({
+      '@type': 'CourseModule',
+      name: konu.baslik,
+      description: konu.detay,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Ana Sayfa',
+        item: 'https://algoritmik.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Eğitimlerimiz',
+        item: 'https://algoritmik.com/egitimlerimiz',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: egitim.baslik,
+        item: `https://algoritmik.com/egitimlerimiz/${egitim.slug}`,
+      },
+    ],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+    </>
+  );
+}
+
 export default function EgitimDetay({ params }) {
   const egitim = egitimler.find((e) => e.slug === params.slug);
   if (!egitim) notFound();
 
   return (
     <main className="min-h-screen bg-white">
+      <CourseJsonLd egitim={egitim} />
+
       {/* 1. HERO BÖLÜMÜ */}
       <section className="py-20 bg-brand-dark text-white px-4">
         <div className="max-w-4xl mx-auto text-center">

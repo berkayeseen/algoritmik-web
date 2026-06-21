@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { MessageCircle } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Navbar() {
     { name: 'Neden Kodlama Eğitimi?', path: '/neden-yazilim' }, 
     { name: 'Eğitimlerimiz', path: '/egitimlerimiz' },
     { name: 'Deneyimler', path: '/deneyimler' }, // Yeni eklenen menü
-    { name: 'Biz Kimiz', path: '/biz-kimiz' },
+    { name: 'Ben Kimim', path: '/ben-kimim' },
   ];
 
   return (
@@ -29,7 +30,7 @@ export default function Navbar() {
           </div>
 
           {/* Masaüstü Menü */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 items-center">
             {navLinks.map((link) => {
               const isActive = pathname === link.path || (link.path !== '/' && pathname.startsWith(link.path));
               return (
@@ -46,6 +47,15 @@ export default function Navbar() {
                 </Link>
               )
             })}
+            
+            <Link
+              href="https://wa.me/905377848942?text=Merhaba,%20sitenizi%20inceledim%20ve%20tanışma%20görüşmesi%20talep%20etmek%20istiyorum."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center px-5 py-2.5 bg-[#25D366] text-white font-semibold rounded-full shadow-md shadow-[#25D366]/20 hover:bg-[#128C7E] hover:-translate-y-0.5 transition-all text-sm"
+            >
+              <MessageCircle className="w-4 h-4 mr-2" /> Görüşme Talep Et
+            </Link>
           </div>
 
           {/* Mobil Hamburger Butonu */}
@@ -78,6 +88,17 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
+            <div className="pt-4 pb-2">
+              <Link
+                href="https://wa.me/905377848942?text=Merhaba,%20sitenizi%20inceledim%20ve%20tanışma%20görüşmesi%20talep%20etmek%20istiyorum."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-center w-full px-4 py-3 bg-[#25D366] text-white font-bold rounded-xl shadow-md hover:bg-[#128C7E] transition-colors"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" /> Görüşme Talep Et
+              </Link>
+            </div>
           </div>
         </div>
       )}

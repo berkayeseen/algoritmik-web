@@ -3,8 +3,16 @@ import { egitimler } from '@/data/egitimler';
 import { ArrowRight, Sparkles, UserCog, Route, GraduationCap, MapPin, Monitor, Clock, AlertCircle, CheckCircle2, Percent } from 'lucide-react';
 
 export const metadata = {
-  title: 'Eğitimlerimiz | Algoritmik',
-  description: 'Öğrencinin ilgi alanına ve hızına göre kişiselleştirdiğim özel yazılım ve teknoloji eğitimleri.',
+  title: 'Yazılım ve Kodlama Eğitimleri — Scratch, Python, C#, Arduino, Unity',
+  description: 'Çocuğunuzun yaşına ve ilgi alanına göre kişiselleştirilen birebir kodlama eğitimleri. Scratch, Python, C#, Arduino, HTML/CSS, Unity ve MIT App Inventor. İzmir yüz yüze ve Türkiye geneli online.',
+  alternates: {
+    canonical: 'https://algoritmik.com/egitimlerimiz',
+  },
+  openGraph: {
+    title: 'Yazılım ve Kodlama Eğitimleri — 10 Farklı Kurs',
+    description: 'Çocuğunuzun yaşına ve ilgi alanına göre kişiselleştirilen birebir kodlama eğitimleri.',
+    url: 'https://algoritmik.com/egitimlerimiz',
+  },
 };
 
 export default function EgitimlerListesi() {
@@ -55,9 +63,9 @@ export default function EgitimlerListesi() {
                 <div className="w-14 h-14 bg-brand-gold/20 rounded-2xl flex items-center justify-center mb-6">
                   <UserCog className="text-brand-gold w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">Uyarlanabilir Zorluk</h3>
+                <h2 className="text-xl font-bold mb-3 text-white">Uyarlanabilir Zorluk</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  İçerikleri, öğrencinin kapasitesine göre bizzat ayarlıyorum. Kazanımlar her zaman eksiksizdir, izlenen yol öğrenciye özeldir.
+                  İçerikleri, öğrencinin öğrenme hızına ve potansiyeline göre bizzat ayarlıyorum. Kazanımlar her zaman eksiksizdir, izlenen yol öğrenciye özeldir.
                 </p>
               </div>
 
@@ -65,7 +73,7 @@ export default function EgitimlerListesi() {
                 <div className="w-14 h-14 bg-brand-gold/20 rounded-2xl flex items-center justify-center mb-6">
                   <Route className="text-brand-gold w-7 h-7" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">Esnek Yol Haritası</h3>
+                <h2 className="text-xl font-bold mb-3 text-white">Esnek Yol Haritası</h2>
                 <p className="text-slate-400 text-sm leading-relaxed">
                   İsterseniz tek bir eğitimi seçerek başlayabilir; isterseniz kolaydan zora doğru planladığım uzun soluklu bir serüvene katılabilirsiniz.
                 </p>
@@ -124,7 +132,7 @@ export default function EgitimlerListesi() {
               </div>
             </div>
             <p className="text-slate-600 mb-6 leading-relaxed relative z-10">
-              Dersten 10 dakika önce ilettiğim güvenli bağlantı linki ile ekran başında buluştuğumuz modeldir. Süreci AnyDesk gibi uzaktan bağlantı araçlarıyla şeffaf bir şekilde yönetiyorum.
+              Dersten 10 dakika önce ilettiğim güvenli bağlantı linki ile ekran başında buluştuğumuz modeldir. Süreci profesyonel ekran paylaşımı ve uzaktan bağlantı araçlarıyla şeffaf bir şekilde yönetiyorum.
             </p>
             <ul className="space-y-4 mt-auto relative z-10">
               <li className="flex items-start gap-3">
@@ -133,7 +141,7 @@ export default function EgitimlerListesi() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-700">Dersler 1.5 saattir. Ancak AnyDesk kurulumu, bağlantı pratiği ve sistem testi yapacağımız <strong>ilk dersimiz 2 saate uzatılır.</strong></span>
+                <span className="text-sm text-slate-700">Dersler 1.5 saattir. Ancak uzaktan bağlantı araçlarının kurulumu, pratik ve sistem testi yapacağımız <strong>ilk dersimiz 2 saate uzatılır.</strong></span>
               </li>
               <li className="flex items-start gap-3 bg-red-50 p-3 rounded-xl border border-red-100">
                 <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />

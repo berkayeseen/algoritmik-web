@@ -13,7 +13,7 @@ module.exports = {
           'brand-bg': '#F8FAFC',
         },
         fontFamily: {
-          sans: ['Inter', 'sans-serif'],
+          sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
         },
       },
     },

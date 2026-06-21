@@ -1,9 +1,85 @@
 import Link from 'next/link';
-import { 
-  Home as HomeIcon, Target, UserCheck, Terminal, Clock, ShieldCheck, 
-  CalendarDays, Cpu, MapPin, LineChart, ArrowRight, Brain, 
+import {
+  Home as HomeIcon, Target, UserCheck, Terminal, Clock, ShieldCheck,
+  CalendarDays, Cpu, MapPin, LineChart, ArrowRight, Brain,
   Compass, MessageCircle, Rocket, PlayCircle
 } from 'lucide-react';
+
+// 🔍 SEO — Ana sayfa metadata (en kritik sayfa)
+export const metadata = {
+  title: 'Algoritmik — Çocuklar İçin Birebir Kodlama ve Teknoloji Eğitimi | İzmir & Online',
+  description: '10-15 yaş arası çocuklar için evde veya online birebir özel kodlama, yazılım ve robotik eğitimi. Scratch, Python, C#, Arduino, Unity dersleri. İzmir yüz yüze ve Türkiye geneli online eğitim.',
+  alternates: {
+    canonical: 'https://algoritmik.com',
+  },
+  openGraph: {
+    title: 'Algoritmik — Çocuklar İçin Birebir Kodlama Eğitimi',
+    description: '10-15 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
+    url: 'https://algoritmik.com',
+  },
+};
+
+// 🔍 SEO — JSON-LD Yapısal Veri (Google Zengin Sonuçlar / Rich Snippets)
+function HomeJsonLd() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      // 1. LocalBusiness — Google Haritalar ve arama sonuçlarında işletme bilgisi
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://algoritmik.com/#business',
+        name: 'Algoritmik — Birebir Kodlama Eğitimi',
+        description: '10-15 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
+        url: 'https://algoritmik.com',
+        telephone: '+905377848942',
+        email: 'merhaba@algoritmik.com',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'İzmir',
+          addressCountry: 'TR',
+        },
+        areaServed: [
+          { '@type': 'City', name: 'İzmir' },
+          { '@type': 'Country', name: 'Türkiye' },
+        ],
+        priceRange: '₺₺',
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          opens: '09:00',
+          closes: '20:00',
+        },
+      },
+      // 2. WebSite — Google arama kutusunda site adı görünmesi için
+      {
+        '@type': 'WebSite',
+        '@id': 'https://algoritmik.com/#website',
+        url: 'https://algoritmik.com',
+        name: 'Algoritmik',
+        description: 'Çocuklar için birebir kodlama ve teknoloji eğitimi',
+        publisher: { '@id': 'https://algoritmik.com/#business' },
+        inLanguage: 'tr-TR',
+      },
+      // 3. EducationalOrganization — Eğitim kurumu olarak tanınma
+      {
+        '@type': 'EducationalOrganization',
+        '@id': 'https://algoritmik.com/#organization',
+        name: 'Algoritmik',
+        url: 'https://algoritmik.com',
+        description: 'Çocuklar için birebir özel kodlama, yazılım ve robotik eğitimi veren bağımsız eğitim platformu.',
+        areaServed: 'Türkiye',
+        teaches: ['Yazılım', 'Kodlama', 'Robotik', 'Python', 'Scratch', 'C#', 'Arduino', 'Unity'],
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
 
 export default function Home() {
   const ozellikler = [
@@ -26,7 +102,7 @@ export default function Home() {
     {
       icon: Compass,
       baslik: "1. Eğitim Felsefemi Keşfedin",
-      metin: "Öncelikle web sitemdeki 'Deneyimler', 'Eğitimlerimiz' ve 'Neden Kodlama?' sayfalarını detaylıca incelemenizi rica ediyorum. Eğitim yaklaşımımı ve velilerimin tecrübelerini görmeniz, kafanızdaki tüm soru işaretlerini giderecektir."
+      metin: "Öncelikle web sitemdeki diğer sayfaları inceleyerek eğitim yaklaşımım ve velilerimin tecrübeleri hakkında şeffaf bir şekilde fikir edinebilirsiniz. Eğitim felsefemi görmeniz, kafanızdaki tüm soru işaretlerini giderecektir."
     },
     {
       icon: MessageCircle,
@@ -42,10 +118,11 @@ export default function Home() {
 
   return (
     <main className="flex flex-col w-full bg-brand-bg">
+      <HomeJsonLd />
       {/* 1. HERO BÖLÜMÜ */}
       <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-white to-slate-100 px-4">
         <div className="max-w-4xl mx-auto text-center z-10">
-          
+
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-dark tracking-tight mb-6">
             <span className="text-brand-blue">Algoritmik</span> ile <br className="hidden md:block" />
             algoritmanın ritmini yakala!
@@ -68,7 +145,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Neden Özel Ders?</h2>
             <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
           </div>
-          
+
           {/* Özellikler Kartları */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ozellikler.map((ozellik, index) => (
@@ -87,7 +164,7 @@ export default function Home() {
             <div className="absolute -right-10 -top-10 text-brand-gold/10 transform rotate-12 transition-transform duration-700 group-hover:rotate-0">
               <PlayCircle size={180} />
             </div>
-            
+
             <div className="mb-8 md:mb-0 md:pr-8 text-center md:text-left relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold text-brand-dark mb-3">
                 Peki Bu Model Gerçekten İşe Yarıyor mu?
@@ -98,17 +175,17 @@ export default function Home() {
             </div>
 
             <div className="flex-shrink-0 relative z-10">
-              <Link 
-                href="/deneyimler" 
+              <Link
+                href="/deneyimler"
                 className="group/btn flex items-center px-8 py-4 bg-white border-2 border-brand-gold text-brand-dark font-bold rounded-xl hover:bg-brand-gold hover:text-white transition-all duration-300 shadow-md hover:shadow-brand-gold/40"
               >
-                <PlayCircle className="mr-2 w-5 h-5 text-amber-500 group-hover/btn:text-white transition-colors" /> 
-                Veli Videolarını İzle 
+                <PlayCircle className="mr-2 w-5 h-5 text-amber-500 group-hover/btn:text-white transition-colors" />
+                Veli Videolarını İzle
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </div>
           </div>
-          
+
         </div>
       </section>
 
@@ -152,7 +229,7 @@ export default function Home() {
       {/* 5. KAYIT ADIMLARI BÖLÜMÜ */}
       <section className="w-full bg-slate-50 py-24 px-4 border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
-          
+
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Eğitim Sürecine Nasıl Başlıyoruz?</h2>
             <div className="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-6"></div>
@@ -164,7 +241,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             {kayitAdimlari.map((adim, index) => (
               <div key={index} className="relative bg-white p-8 rounded-3xl shadow-sm border border-slate-200 hover:border-brand-gold/50 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center z-10 hover:-translate-y-2">
-                
+
                 <div className="absolute top-4 right-6 text-slate-100 font-extrabold text-6xl select-none z-0">
                   {index + 1}
                 </div>
@@ -172,7 +249,7 @@ export default function Home() {
                 <div className="relative z-10 w-16 h-16 bg-brand-blue/10 text-brand-blue flex items-center justify-center rounded-2xl mb-6">
                   <adim.icon size={32} strokeWidth={2} />
                 </div>
-                
+
                 <h3 className="relative z-10 text-xl font-bold text-brand-dark mb-4">{adim.baslik}</h3>
                 <p className="relative z-10 text-slate-600 leading-relaxed text-sm">{adim.metin}</p>
               </div>
@@ -180,8 +257,8 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <Link 
-              href="https://wa.me/905377848942?text=Merhaba,%20sitenizi%20inceledim%20ve%2040%20dakikalık%20ücretsiz%20online%20tanışma%20görüşmesi%20için%20talep%20oluşturmak%20istiyorum." 
+            <Link
+              href="https://wa.me/905377848942?text=Merhaba,%20sitenizi%20inceledim%20ve%2040%20dakikalık%20ücretsiz%20online%20tanışma%20görüşmesi%20için%20talep%20oluşturmak%20istiyorum."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-10 py-4 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:scale-105 transition-all text-lg"
