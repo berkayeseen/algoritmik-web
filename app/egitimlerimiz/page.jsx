@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { egitimler } from '@/data/egitimler';
-import { ArrowRight, Sparkles, UserCog, Route, GraduationCap, MapPin, Monitor, Clock, AlertCircle, CheckCircle2, Percent } from 'lucide-react';
+import { ArrowRight, Sparkles, UserCog, Route, GraduationCap, MapPin, Monitor, Clock, AlertCircle, CheckCircle2, Percent, Code, MonitorPlay, Focus } from 'lucide-react';
 
 export const metadata = {
   title: 'Yazılım ve Kodlama Eğitimleri — Scratch, Python, C#, Arduino, Unity',
@@ -108,7 +108,11 @@ export default function EgitimlerListesi() {
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-700">Tüm dersler net <strong>1.5 saat</strong> sürer.</span>
+                <span className="text-sm text-slate-700">Derslerimiz net <strong>1 saat 20 dakika</strong> sürer. Kırkıncı dakikada verilen <strong>10 dakikalık mola</strong> ile toplam süre 1.5 saati bulur.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Code className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-700">Eğitim sadece dinleme üzerine kurulu değildir. <strong>Öğrenci benimle eş zamanlı kod yazar.</strong> Yanlış yaptığında veya takıldığında anında müdahale ederek doğru mantığı kavramasını sağlarım.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
@@ -132,16 +136,16 @@ export default function EgitimlerListesi() {
               </div>
             </div>
             <p className="text-slate-600 mb-6 leading-relaxed relative z-10">
-              Dersten 10 dakika önce ilettiğim güvenli bağlantı linki ile ekran başında buluştuğumuz modeldir. Süreci profesyonel ekran paylaşımı ve uzaktan bağlantı araçlarıyla şeffaf bir şekilde yönetiyorum.
+              Klasik ve yüzeysel online eğitimlerle karıştırılmaması gereken, <strong>tamamen birebir</strong> çalıştığımız modeldir. Öğrenci kendi ekranını paylaşır; ben attığı her adımı anlık olarak takip eder, hataları üzerinde detaylıca konuşur ve sürekli kontrolüm altında ilerlemesini sağlarım.
             </p>
             <ul className="space-y-4 mt-auto relative z-10">
               <li className="flex items-start gap-3">
-                <Percent className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-700">Yüz yüze derslerime göre <strong>%15 fiyat avantajı</strong> sağlar.</span>
+                <Clock className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-700">Derslerimiz net <strong>1 saat 20 dakika</strong> sürer. Kırkıncı dakikada verilen <strong>10 dakikalık mola</strong> ile toplam süre 1.5 saati bulur. İlk dersimizde ise gerekli kurulumlar yapılır, bağlantı test edilir ve öğrencinin sürece alışması sağlandığı için bu ilk ders <strong>normalden daha uzun sürer</strong>.</span>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-700">Dersler 1.5 saattir. Ancak uzaktan bağlantı araçlarının kurulumu, pratik ve sistem testi yapacağımız <strong>ilk dersimiz 2 saate uzatılır.</strong></span>
+                <Code className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-slate-700">Online eğitimde de süreç sadece dinlemekle geçmez. <strong>Öğrenci kendi bilgisayarında kod yazar.</strong> Ben ekranını izler, onu bekler ve takıldığı yerlerde anında müdahale ederim.</span>
               </li>
               <li className="flex items-start gap-3 bg-red-50 p-3 rounded-xl border border-red-100">
                 <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
@@ -152,6 +156,45 @@ export default function EgitimlerListesi() {
             </ul>
           </div>
 
+        </div>
+      </section>
+
+      {/* 2.5. NEDEN BİZİM ONLİNE EĞİTİMİMİZ FARKLI? */}
+      <section className="max-w-7xl mx-auto px-4 mb-24 relative z-20">
+        <div className="bg-brand-dark rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+          
+          <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
+            <div className="lg:w-1/3">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sıradan Online Eğitimleri Unutun!</h2>
+              <div className="w-16 h-1.5 bg-brand-gold rounded-full mb-6"></div>
+              <p className="text-slate-300 leading-relaxed text-lg">
+                Online eğitimin verimsiz olduğu algısını yıkmak için buradayım. Kalabalık sınıflarda öğrencilerin kaybolduğu, hocanın sadece slayt okuduğu o eski sistemleri tamamen rafa kaldırıyoruz.
+              </p>
+            </div>
+            
+            <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="w-12 h-12 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-4 text-brand-gold">
+                  <MonitorPlay size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Çift Monitör ile Tam Takip</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Derslerimde her zaman çift monitör kullanırım. Bir ekranımda kendi materyallerim açıkken, diğer ekranımdan <strong>saniye saniye sadece öğrencinin bilgisayar ekranını</strong> canlı olarak izlerim.
+                </p>
+              </div>
+
+              <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                <div className="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
+                  <Focus size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Adım Adım Birebir Müdahale</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Öğrenci sınıftaki diğer kişileri beklemek zorunda kalmaz. Kodu yazarken hata yaptığında veya tıkandığında bunu anında görür, bekletmeden müdahale eder ve hatanın mantığını o an birlikte tartışırız.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

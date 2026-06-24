@@ -45,18 +45,18 @@ export default function BenKimim() {
   const degerler = [
     { 
       icon: Target, 
-      baslik: "Tamamen Çocuğunuza Özel Odak", 
-      metin: "Kalabalık sınıflardaki standart müfredatların aksine, derslerimizi doğrudan çocuğunuzun ilgi alanlarına (oyun tasarımı, robotik, yazılım) ve öğrenme hızına göre anlık olarak şekillendiriyorum." 
+      baslik: "İlgi Alanlarından Beslenen Bir Müfredat", 
+      metin: "Öğrenme sürecini çocuğunuzun sevdiği oyunlar ve merak ettiği konular üzerine inşa ediyoruz. Önceden ezberlenmiş kalıplar yerine, onun hızına ve ilgisine saygı duyan esnek bir rotada ilerliyoruz." 
     },
     { 
       icon: Code, 
-      baslik: "Sıkıcı Teoriler Yok, Üretim Var", 
-      metin: "Öğrencilerime saatlerce teori anlatmak yerine, ilk dersten itibaren klavye başında kod yazdırarak hata yapmaktan korkmamalarını ve kendi projelerini üretmelerini sağlıyorum." 
+      baslik: "Teori Değil, Pratik Üzerinden Öğrenme", 
+      metin: "İlk dersten itibaren sadece dinleyen değil, klavyeye dokunan ve hata yapmaktan çekinmeyen bir yaklaşım benimsiyoruz. Kendi projelerimizi üretirken yazılımın mantığını ezberlemeden, yaşayarak kavrıyoruz." 
     },
     { 
       icon: HeartHandshake, 
-      baslik: "Velilerle Sürekli ve Şeffaf İletişim", 
-      metin: "Her anlamlı konu bitiminde 'Bugün ne yaptık? Çocuğunuz hangi konuda iyi, nerede zorlanıyor?' sorularının cevabını standart raporlarla değil, doğrudan benden şeffaf bir şekilde duyarsınız." 
+      baslik: "Açık İletişim ve Sürekli Geri Bildirim", 
+      metin: "Eğitim sürecini kapalı kapılar ardında bırakmıyoruz. 'Bugün neleri başardık, nerelerde zorlandık?' gibi süreçleri karmaşık raporlarla değil; sizinle her dersin sonunda samimi, anlaşılır ve şeffaf bir dille paylaşıyoruz." 
     },
   ];
 
@@ -96,8 +96,8 @@ export default function BenKimim() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-brand-gold/20 to-brand-blue/10 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 ring-1 ring-slate-200">
                 <Image 
-                  src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=800&q=80" 
-                  alt="Eğitmen portresi" 
+                  src="/profil.jpeg" 
+                  alt="Berkay Esen - Eğitmen Portresi" 
                   width={800}
                   height={1000}
                   priority={true}
@@ -109,19 +109,25 @@ export default function BenKimim() {
             {/* İçerik Alanı */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <h2 className="text-3xl font-bold text-brand-dark tracking-tight">Neden Bu İşi Yapıyorum?</h2>
+                <h2 className="text-3xl font-bold text-brand-dark tracking-tight">Eğitim ve Kariyer Yolculuğum</h2>
                 <div className="w-16 h-1.5 bg-brand-gold rounded-full mt-4"></div>
               </div>
               
-              <div className="text-lg text-slate-600 leading-relaxed space-y-6">
+              <div className="text-lg text-slate-600 leading-relaxed space-y-4">
                 <p>
-                  Yıllar boyunca verdiğim eğitimlerde gördüğüm en net gerçek şuydu: <strong>Her çocuğun zihni tamamen farklı çalışır.</strong> Kalabalık sınıf ortamlarında ve tek tip müfredatlarda birçok parlak potansiyelin kaybolup gittiğine şahit oldum.
+                  Merhaba ben <strong>Berkay Esen</strong>. Teknolojiye olan tutkum lise yıllarında, 2019 yılında <strong>Buca Zübeyde Hanım Mesleki ve Teknik Anadolu Lisesi</strong>'nde başladı. Robotik çalışmalarına ve kodlamaya ilk adımlarımı burada atarken, aynı zamanda okulun Robotik Kulübü Başkanlığını üstlendim ve çeşitli web projeleri geliştirdim.
                 </p>
                 <p>
-                  İşte tam bu yüzden, doğrudan çocuğunuzun ilgi alanına ve öğrenme hızına göre anlık olarak şekillenen, <strong>tamamen birebir</strong> bu eğitim modelini geliştirdim.
+                  Öğrencilik dönemimde <strong>Karabük Üniversitesi, Yıldız Teknik Üniversitesi, İYTE</strong> ve MEB'in düzenlediği <strong>Uluslararası Sivas Robotik Yarışması</strong> gibi birçok prestijli organizasyonda yarışarak sahada aktif tecrübe kazandım.
                 </p>
                 <p>
-                  Benim için en büyük başarı, bir çocuğun ekrandaki ilk projesini çalıştırdığında &quot;Bunu ben yaptım!&quot; derken gözlerindeki o parıltıyı görmektir. Çocuğunuz benimle sadece kod yazmayı değil; hata yapmaktan korkmamayı, analitik düşünmeyi ve yarının dijital dünyasında kendi fikirlerini hayata geçirmeyi öğrenecek.
+                  Akademik eğitimimde ilk olarak <strong>Yaşar Üniversitesi Bilgisayar Programcılığı</strong> bölümünden mezun oldum. Ardından DGS ile yine <strong>Yaşar Üniversitesi Yazılım Mühendisliği</strong> bölümüne yerleşerek mühendislik eğitimime adım attım.
+                </p>
+                <p>
+                  Son 3 yıl boyunca özel bir kurumda çocuklar ve yetişkinlerle kodlama, tasarım ve robotik üzerine profesyonel olarak çalışma fırsatım oldu. Bu süreçte yüzlerce öğrencinin eğitim hayatına dokunurken, son 2 yılda da onlarca öğrenciyle birebir özel dersler yaparak onların bireysel gelişimlerine yakından rehberlik ettim.
+                </p>
+                <p className="font-semibold text-brand-blue pt-2 text-xl">
+                  Şimdi ise tüm bu birikimimi <span className="text-brand-gold">Algoritmik</span> çatısı altında, tamamen çocuğunuzun potansiyeline odaklanan özel bir eğitim modeliyle sizlerle buluşturuyorum.
                 </p>
               </div>
             </div>
@@ -132,7 +138,7 @@ export default function BenKimim() {
       {/* 3. EĞİTİM DEĞERLERİM (Sadeleştirilmiş Kartlar) */}
       <section className="max-w-6xl mx-auto px-4 py-24">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Eğitim Felsefem</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Birlikte Nasıl Bir Yol İzliyoruz?</h2>
           <div className="w-20 h-1 bg-brand-gold mx-auto rounded-full"></div>
         </div>
         
