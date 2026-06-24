@@ -18,8 +18,8 @@ export default function Footer() {
             <p className="text-sm font-semibold text-brand-gold mb-4 uppercase tracking-wider">
               "Algoritmanın ritmini yakala!"
             </p>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              10–15 yaş arası çocuklar için tasarlanmış, öğrencinin potansiyeline ve hızına odaklanan birebir mentörlük ve teknoloji eğitim modeli.
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
+              9-17 yaş arası çocuklar için tasarlanmış, öğrencinin potansiyeline ve hızına odaklanan birebir mentörlük ve teknoloji eğitim modeli.
             </p>
           </div>
 

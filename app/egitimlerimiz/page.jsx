@@ -161,36 +161,36 @@ export default function EgitimlerListesi() {
 
       {/* 2.5. NEDEN BİZİM ONLİNE EĞİTİMİMİZ FARKLI? */}
       <section className="max-w-7xl mx-auto px-4 mb-24 relative z-20">
-        <div className="bg-brand-dark rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
+        <div className="bg-brand-dark rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-white/10">
           <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
           
           <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/3">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sıradan Online Eğitimleri Unutun!</h2>
               <div className="w-16 h-1.5 bg-brand-gold rounded-full mb-6"></div>
-              <p className="text-slate-300 leading-relaxed text-lg">
-                Online eğitimin verimsiz olduğu algısını yıkmak için buradayım. Kalabalık sınıflarda öğrencilerin kaybolduğu, hocanın sadece slayt okuduğu o eski sistemleri tamamen rafa kaldırıyoruz.
+              <p className="text-slate-100 leading-relaxed text-lg">
+                Diğer online kurumlardaki kalabalık ve verimsiz sınıf ortamlarını bir kenara bırakın. Bizim modelimizde sınıf yoktur, <strong>tamamen birebir</strong> ilerleriz. Böylece öğrenci çok daha rahat soru sorar, çekinmeden anlamadığı yeri belirtir ve pasif bir dinleyici olmaktan çıkar.
               </p>
             </div>
             
             <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <div className="w-12 h-12 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-4 text-brand-gold">
-                  <MonitorPlay size={24} />
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors shadow-lg">
+                <div className="w-14 h-14 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 text-brand-gold">
+                  <MonitorPlay size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Çift Monitör ile Tam Takip</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Derslerimde her zaman çift monitör kullanırım. Bir ekranımda kendi materyallerim açıkken, diğer ekranımdan <strong>saniye saniye sadece öğrencinin bilgisayar ekranını</strong> canlı olarak izlerim.
+                <h3 className="text-xl font-bold text-white mb-3">Çift Monitör ile Uygulamalı Takip</h3>
+                <p className="text-slate-200 text-base leading-relaxed">
+                  Derslerimde her zaman çift monitör kullanırım. Bir ekranda kendi materyallerim açıkken, diğerinden <strong>saniye saniye sadece öğrencinin ekranını</strong> canlı olarak izlerim. Başka kurslardaki gibi sadece slayt izletilmez; öğrenci tam kontrolümde kendi kodunu yazar.
                 </p>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <div className="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
-                  <Focus size={24} />
+              <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors shadow-lg">
+                <div className="w-14 h-14 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
+                  <Focus size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Diğerlerini Beklemek Yok</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Kalabalık kurslarda bir kişi takıldığında tüm sınıf onu beklemek zorundadır. Bizde ise durum tam tersi; tek öğrenci olduğu için anında müdahale edilir, gereksiz beklemeler yaşanmaz ve öğrenci kendini çok daha özel hissederek hızla ilerler.
+                <h3 className="text-xl font-bold text-white mb-3">Sınıf Beklemek Yok, Anında Müdahale</h3>
+                <p className="text-slate-200 text-base leading-relaxed">
+                  Kalabalık kurslarda bir kişi takıldığında tüm sınıf onu beklemek zorundadır. Bizde ise sınıf olmadığı için süreç tamamen öğrencinin hızında işler. Hata yaptığında anında görür, bekletmeden müdahale eder ve hatanın mantığını tartışarak hızla çözeriz.
                 </p>
               </div>
             </div>
