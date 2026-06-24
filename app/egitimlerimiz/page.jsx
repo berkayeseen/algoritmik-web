@@ -99,7 +99,7 @@ export default function EgitimlerListesi() {
               </div>
             </div>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Bu eğitim modeli bizzat <strong>öğrencinin kendi evinde</strong> verilir. Çocuğunuzun alıştığı çalışma ortamında, yol ve trafik derdi olmadan yan yana işlediğimiz bir süreçtir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
+              Bu eğitim modelinde <strong>eğitmen doğrudan öğrencinin evine gelir.</strong> Çocuğunuzun alıştığı çalışma ortamında, yol ve trafik derdi olmadan yan yana işlediğimiz bir süreçtir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
             </p>
             <ul className="space-y-4 mt-auto">
               <li className="flex items-start gap-3">
