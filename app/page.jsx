@@ -8,13 +8,13 @@ import {
 // 🔍 SEO — Ana sayfa metadata (en kritik sayfa)
 export const metadata = {
   title: 'Algoritmik — Çocuklar İçin Birebir Kodlama ve Teknoloji Eğitimi | İzmir & Online',
-  description: '10-15 yaş arası çocuklar için evde veya online birebir özel kodlama, yazılım ve robotik eğitimi. Scratch, Python, C#, Arduino, Unity dersleri. İzmir yüz yüze ve Türkiye geneli online eğitim.',
+  description: '9-17 yaş arası çocuklar için evde veya online birebir özel kodlama, yazılım ve robotik eğitimi. Scratch, Python, C#, Arduino, Unity dersleri. İzmir yüz yüze ve Türkiye geneli online eğitim.',
   alternates: {
     canonical: 'https://algoritmik.com',
   },
   openGraph: {
     title: 'Algoritmik — Çocuklar İçin Birebir Kodlama Eğitimi',
-    description: '10-15 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
+    description: '9-17 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
     url: 'https://algoritmik.com',
   },
 };
@@ -29,7 +29,7 @@ function HomeJsonLd() {
         '@type': 'LocalBusiness',
         '@id': 'https://algoritmik.com/#business',
         name: 'Algoritmik — Birebir Kodlama Eğitimi',
-        description: '10-15 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
+        description: '9-17 yaş arası çocuklar için evde veya online birebir kodlama, yazılım ve robotik eğitimi.',
         url: 'https://algoritmik.com',
         telephone: '+905377848942',
         email: 'merhaba@algoritmik.com',

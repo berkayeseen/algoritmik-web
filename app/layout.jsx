@@ -18,7 +18,7 @@ export const metadata = {
     default: 'Algoritmik — Birebir Kodlama ve Teknoloji Eğitimi',
     template: '%s | Algoritmik',
   },
-  description: '10-15 yaş arası çocuklar için evde veya online, tamamen birebir ve öğrenciye özel yazılım, kodlama ve robotik eğitimleri. İzmir ve Türkiye geneli.',
+  description: '9-17 yaş arası çocuklar için evde veya online, tamamen birebir ve öğrenciye özel yazılım, kodlama ve robotik eğitimleri. İzmir ve Türkiye geneli.',
   keywords: ['kodlama eğitimi', 'çocuklar için yazılım', 'birebir özel ders', 'robotik eğitim', 'İzmir kodlama kursu', 'online kodlama', 'scratch eğitimi', 'python eğitimi'],
   authors: [{ name: 'Algoritmik' }],
   creator: 'Algoritmik',
@@ -28,7 +28,7 @@ export const metadata = {
     locale: 'tr_TR',
     siteName: 'Algoritmik',
     title: 'Algoritmik — Birebir Kodlama ve Teknoloji Eğitimi',
-    description: '10-15 yaş arası çocuklar için evde veya online, tamamen birebir yazılım ve teknoloji eğitimleri.',
+    description: '9-17 yaş arası çocuklar için evde veya online, tamamen birebir yazılım ve teknoloji eğitimleri.',
     images: [
       {
         url: '/og-image.jpg',
@@ -41,7 +41,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Algoritmik — Birebir Kodlama ve Teknoloji Eğitimi',
-    description: '10-15 yaş arası çocuklar için birebir yazılım ve teknoloji eğitimleri.',
+    description: '9-17 yaş arası çocuklar için birebir yazılım ve teknoloji eğitimleri.',
     images: ['/og-image.jpg'],
   },
   robots: {

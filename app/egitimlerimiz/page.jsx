@@ -188,9 +188,9 @@ export default function EgitimlerListesi() {
                 <div className="w-12 h-12 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-4 text-blue-400">
                   <Focus size={24} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Adım Adım Birebir Müdahale</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Diğerlerini Beklemek Yok</h3>
                 <p className="text-slate-400 text-sm leading-relaxed">
-                  Öğrenci sınıftaki diğer kişileri beklemek zorunda kalmaz. Kodu yazarken hata yaptığında veya tıkandığında bunu anında görür, bekletmeden müdahale eder ve hatanın mantığını o an birlikte tartışırız.
+                  Kalabalık kurslarda bir kişi takıldığında tüm sınıf onu beklemek zorundadır. Bizde ise durum tam tersi; tek öğrenci olduğu için anında müdahale edilir, gereksiz beklemeler yaşanmaz ve öğrenci kendini çok daha özel hissederek hızla ilerler.
                 </p>
               </div>
             </div>

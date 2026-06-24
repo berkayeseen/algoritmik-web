@@ -29,7 +29,7 @@ function PersonJsonLd() {
     },
     url: 'https://algoritmik.com/ben-kimim',
     image: 'https://algoritmik.com/og-image.jpg',
-    description: '10-15 yaş arası çocuklar için özel yazılım, kodlama ve robotik mentörü.',
+    description: '9-17 yaş arası çocuklar için özel yazılım, kodlama ve robotik mentörü.',
     knowsAbout: ['Python', 'Scratch', 'Robotik', 'Yazılım', 'C#', 'Eğitim'],
   };
 
