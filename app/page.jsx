@@ -189,46 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2.5. NEDEN BİZİM ONLİNE EĞİTİMİMİZ FARKLI? */}
-      <section className="w-full bg-slate-50 pb-24 px-4 relative z-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-brand-dark rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl border border-white/10">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-brand-blue/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            
-            <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
-              <div className="lg:w-1/3">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sıradan Online Eğitimleri Unutun!</h2>
-                <div className="w-16 h-1.5 bg-brand-gold rounded-full mb-6"></div>
-                <p className="text-slate-100 leading-relaxed text-lg">
-                  Diğer online kurumlardaki kalabalık ve verimsiz sınıf ortamlarını bir kenara bırakın. Bizim modelimizde sınıf yoktur, <strong>tamamen birebir</strong> ilerleriz. Böylece öğrenci çok daha rahat soru sorar, çekinmeden anlamadığı yeri belirtir ve pasif bir dinleyici olmaktan çıkar.
-                </p>
-              </div>
-              
-              <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors shadow-lg">
-                  <div className="w-14 h-14 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 text-brand-gold">
-                    <MonitorPlay size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Çift Monitör ile Uygulamalı Takip</h3>
-                  <p className="text-slate-200 text-base leading-relaxed">
-                    Derslerimde her zaman çift monitör kullanırım. Bir ekranda kendi materyallerim açıkken, diğerinden <strong>saniye saniye sadece öğrencinin ekranını</strong> canlı olarak izlerim. Başka kurslardaki gibi sadece slayt izletilmez; öğrenci tam kontrolümde kendi kodunu yazar.
-                  </p>
-                </div>
 
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20 hover:bg-white/20 transition-colors shadow-lg">
-                  <div className="w-14 h-14 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
-                    <Focus size={28} />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">Sınıf Beklemek Yok, Anında Müdahale</h3>
-                  <p className="text-slate-200 text-base leading-relaxed">
-                    Kalabalık kurslarda bir kişi takıldığında tüm sınıf onu beklemek zorundadır. Bizde ise sınıf olmadığı için süreç tamamen öğrencinin hızında işler. Hata yaptığında anında görür, bekletmeden müdahale eder ve hatanın mantığını tartışarak hızla çözeriz.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* 3. NEDEN KODLAMA BÖLÜMÜ */}
       <section className="py-24 px-4 bg-brand-dark text-white text-center">

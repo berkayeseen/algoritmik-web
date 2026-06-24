@@ -169,7 +169,7 @@ export default function EgitimlerListesi() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Sıradan Online Eğitimleri Unutun!</h2>
               <div className="w-16 h-1.5 bg-brand-gold rounded-full mb-6"></div>
               <p className="text-slate-100 leading-relaxed text-lg">
-                Diğer online kurumlardaki kalabalık ve verimsiz sınıf ortamlarını bir kenara bırakın. Bizim modelimizde sınıf yoktur, <strong>tamamen birebir</strong> ilerleriz. Böylece öğrenci çok daha rahat soru sorar, çekinmeden anlamadığı yeri belirtir ve pasif bir dinleyici olmaktan çıkar.
+                Online eğitimin "anlaşılması zor" ve "öğretmene müdahalenin kısıtlı" olduğu o kalabalık sınıf ortamlarını unutun. Bizim modelimizde sınıf yoktur, <strong>tamamen birebir</strong> ilerleriz. Böylece öğrenci çok daha kolay iletişim kurar ve çekinmeden soru sorabilir.
               </p>
             </div>
             
@@ -178,9 +178,9 @@ export default function EgitimlerListesi() {
                 <div className="w-14 h-14 bg-brand-gold/20 rounded-xl flex items-center justify-center mb-6 text-brand-gold">
                   <MonitorPlay size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Çift Monitör ile Uygulamalı Takip</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Ekran Paylaşımıyla Tam Kontrol</h3>
                 <p className="text-slate-200 text-base leading-relaxed">
-                  Derslerimde her zaman çift monitör kullanırım. Bir ekranda kendi materyallerim açıkken, diğerinden <strong>saniye saniye sadece öğrencinin ekranını</strong> canlı olarak izlerim. Başka kurslardaki gibi sadece slayt izletilmez; öğrenci tam kontrolümde kendi kodunu yazar.
+                  Öğrenci derste pasif bir izleyici değildir; kendi bilgisayarında kod yazar ve ben onun ekranını anlık olarak takip ederim. Takıldığı yerlerde sorusunu anında yanıtlar, vakit kaybetmeden doğrudan müdahale ederek süreci hızlandırırım.
                 </p>
               </div>
 
@@ -188,9 +188,9 @@ export default function EgitimlerListesi() {
                 <div className="w-14 h-14 bg-brand-blue/20 rounded-xl flex items-center justify-center mb-6 text-blue-400">
                   <Focus size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Sınıf Beklemek Yok, Anında Müdahale</h3>
+                <h3 className="text-xl font-bold text-white mb-3">Beklemek ve Zaman Kaybı Yok</h3>
                 <p className="text-slate-200 text-base leading-relaxed">
-                  Kalabalık kurslarda bir kişi takıldığında tüm sınıf onu beklemek zorundadır. Bizde ise sınıf olmadığı için süreç tamamen öğrencinin hızında işler. Hata yaptığında anında görür, bekletmeden müdahale eder ve hatanın mantığını tartışarak hızla çözeriz.
+                  Kalabalık online sınıflarda öğretmen diğer öğrencilerle ilgilenirken, takılan bir öğrenci dakikalarca beklemek zorunda kalır. Bizim modelimizde ise başkasını bekleme veya öğretmene ulaşamama sorunu yoktur; zaman kaybı yaşanmaz.
                 </p>
               </div>
             </div>
