@@ -159,23 +159,33 @@ export default function BenKimim() {
       </section>
 
       {/* 4. FOOTER-CTA (Harekete Geçirici Mesaj) */}
-      <section className="max-w-4xl mx-auto px-4 pb-12 text-center">
-        <div className="bg-brand-dark rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl">
-          <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-brand-blue to-white pointer-events-none"></div>
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Önce Tanışalım</h2>
-            <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Çocuğunuzun geleceğine birlikte yön vermek için ilk adımı atalım. Beklentilerinizi konuşmak için 40 dakikalık ücretsiz tanışma görüşmesi talep edebilirsiniz.
+      <section className="max-w-4xl mx-auto px-4 pb-20">
+        <div className="bg-brand-dark rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-2xl border border-brand-blue/20 flex flex-col items-center text-center gap-8">
+          
+          {/* Dekoratif Işıklar */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-blue/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+          <div className="relative z-10 max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+              Önce <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">Tanışalım</span>
+            </h2>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              Eğitim yolculuğuna başlamadan önce, beklentilerinizi konuşacağımız <strong className="text-white">40 dakikalık ücretsiz</strong> bir online tanışma görüşmesi talep edebilirsiniz.
             </p>
+          </div>
+
+          <div className="relative z-10 flex justify-center w-full">
             <Link 
               href="https://wa.me/905377848942?text=Merhaba,%20sitenizi%20inceledim%20ve%20tanışma%20görüşmesi%20talep%20etmek%20istiyorum." 
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-8 py-4 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#25D366]/50 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] text-lg"
+              className="inline-flex items-center justify-center px-10 py-4 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:-translate-y-1 hover:shadow-[#25D366]/50 transition-all duration-300 text-lg group"
             >
-              <MessageCircle className="mr-3 w-6 h-6" /> WhatsApp&apos;tan İletişime Geç
+              <MessageCircle className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform" /> WhatsApp'tan Ulaşın
             </Link>
           </div>
+
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Brain, ShieldCheck, Lightbulb, Rocket, Code, LineChart, ArrowRight } from 'lucide-react';
+import { Brain, ShieldCheck, Lightbulb, Rocket, Code, LineChart, ArrowRight, MessageCircle } from 'lucide-react';
 
 // 🔍 SEO — Anahtar kelime odaklı, uzun ve açıklayıcı metadata
 export const metadata = {
@@ -151,19 +151,20 @@ export default function NedenYazilim() {
       </section>
 
       {/* 4. FOOTER-CTA */}
-      <section className="py-24 px-4 bg-white text-center border-t border-slate-100">
-        <div className="max-w-4xl mx-auto">
-          <LineChart className="w-16 h-16 text-brand-gold mx-auto mb-8" />
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Çocuğunuzun Zihinsel Potansiyelini Ortaya Çıkarın</h2>
-          <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+      <section className="py-16 px-4 bg-white text-center border-t border-slate-100">
+        <div className="max-w-3xl mx-auto">
+          <LineChart className="w-12 h-12 text-brand-gold mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Çocuğunuzun Zihinsel Potansiyelini Ortaya Çıkarın</h2>
+          <p className="text-base md:text-lg text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
             Onu ekran karşısında pasif bir tüketici olmaktan çıkarıp, kendi geleceğini tasarlayan üretken bir bireye dönüştürmek için bugün ilk adımı atın.
           </p>
           <Link 
             href="https://wa.me/905377848942?text=Merhaba,%20kodlama%20eğitimi%20hakkında%20bilgi%20almak%20istiyorum." 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-amber-400 to-amber-600 text-white font-bold rounded-xl shadow-lg hover:shadow-amber-500/30 hover:scale-105 transition-all text-lg"
+            className="inline-flex items-center px-8 py-3 bg-[#25D366] text-white font-bold rounded-xl shadow-lg shadow-[#25D366]/30 hover:bg-[#128C7E] hover:scale-105 transition-all text-base md:text-lg"
           >
+            <MessageCircle className="mr-2 w-5 h-5" />
             İletişime Geç, Bilgi Al
           </Link>
         </div>
