@@ -99,12 +99,12 @@ export default function EgitimlerListesi() {
               </div>
             </div>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Öğrencinin kendi çalışma ortamında, odak kaybı yaşamadan yan yana işlediğimiz eğitim modelidir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
+              Bu eğitim modeli bizzat <strong>öğrencinin kendi evinde</strong> verilir. Çocuğunuzun alıştığı çalışma ortamında, yol ve trafik derdi olmadan yan yana işlediğimiz bir süreçtir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
             </p>
             <ul className="space-y-4 mt-auto">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
-                <span className="text-sm text-slate-700">İzmir'in ana merkez ilçelerinde (<strong>Balçova, Karabağlar, Buca, Gaziemir, Konak, Karşıyaka, Bayraklı, Bornova</strong>) verilir.</span>
+                <span className="text-sm text-slate-700">İzmir'in ana merkez ilçelerinde (<strong>Balçova, Karabağlar, Buca, Gaziemir, Konak, Karşıyaka, Bayraklı, Bornova</strong>) <strong>öğrencinin adresine gelerek</strong> verilir.</span>
               </li>
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-brand-blue flex-shrink-0 mt-0.5" />
