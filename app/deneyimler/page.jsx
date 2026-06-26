@@ -18,24 +18,28 @@ const galeriFotograflari = [
 const veliVideolari = [
   {
     id: 1,
-    isim: "Ayşe Y. - Veli",
-    yorum: "Evimize bir eğitmen kabul etmek başta bizi düşündürmüştü ama ilk tanışma dersinden itibaren ne kadar profesyonel ve güvenilir bir eğitim olduğunu gördük.",
+    isim: "Sedat Tıraklı",
+    meslek: "Matematik Öğretmeni",
+    ogrenci: "Kerem Tıraklı",
+    yorum: "Oğlum Kerem'in bilgisayar ve yazılıma olan ilgisini fark edince, ortaokuldan eski öğrencim Berkay ile iletişime geçerek evimizde harika bir eğitim sürecine başladık. Kerem'in MIT App Inventor, Arduino ve Scratch gibi programlarla hem eğlenip hem de yeni şeyler öğrendiği bu süreçteki emekleri için Berkay hocamıza çok teşekkür ederiz.",
     thumbnail: "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    videoUrl: "/videos/video1.mp4"
   },
   {
     id: 2,
-    isim: "Murat K. - Veli",
+    isim: "Murat K.",
+    meslek: "Veli",
     yorum: "Oğlumun dikkatini toplamak zordur fakat birebir ilginiz ve online dersteki enerjiniz sayesinde artık ders günlerini iple çekiyor.",
     thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    videoUrl: "" // Örnek olması için boş bırakıldı, video gelince eklenecek
   },
   {
     id: 3,
-    isim: "Elif S. - Veli",
+    isim: "Elif S.",
+    meslek: "Veli",
     yorum: "Kendi hızında öğrenmesi, takıldığı yerde anında destek alabilmesi özel dersin en büyük avantajı oldu. Gelişimi harika.",
     thumbnail: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4"
+    videoUrl: ""
   }
 ];
 
@@ -47,8 +51,6 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
 export default function DeneyimlerPage() {
   const [activeVideo, setActiveVideo] = useState(null);
 
-  // ⚡ useCallback ile fonksiyon referansını stabilize ediyoruz.
-  // Bu sayede her render'da yeni fonksiyon oluşturulmaz.
   const openVideo = useCallback((videoUrl) => {
     setActiveVideo(videoUrl);
   }, []);
@@ -58,7 +60,6 @@ export default function DeneyimlerPage() {
   }, []);
 
   const handleBackdropClick = useCallback((e) => {
-    // Sadece arka plana (backdrop) tıklanırsa kapat
     if (e.target === e.currentTarget) {
       setActiveVideo(null);
     }
@@ -114,32 +115,51 @@ export default function DeneyimlerPage() {
           {veliVideolari.map((video) => (
             <div 
               key={video.id} 
-              className="group bg-white rounded-3xl p-6 shadow-md border border-slate-200 hover:border-brand-gold/50 hover:shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col hover:-translate-y-3"
+              className="group bg-white rounded-3xl p-6 shadow-md border border-slate-200 hover:border-brand-gold/50 hover:shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col hover:-translate-y-2"
             >
               <div 
                 className="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-800 mb-6 cursor-pointer"
-                onClick={() => openVideo(video.videoUrl)}
+                onClick={() => {
+                  if (video.videoUrl) openVideo(video.videoUrl);
+                }}
               >
-                {/* ⚡ next/image — Otomatik lazy-load, WebP/AVIF dönüşümü, CLS koruması */}
-                <Image 
-                  src={video.thumbnail} 
-                  alt={video.isim}
-                  fill
-                  className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
-                />
+                {video.videoUrl ? (
+                  <video 
+                    src={`${video.videoUrl}#t=0.1`}
+                    preload="metadata"
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                  />
+                ) : (
+                  <Image 
+                    src={video.thumbnail} 
+                    alt={video.isim}
+                    fill
+                    className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                  />
+                )}
                 <div className="absolute inset-0 flex items-center justify-center bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors duration-300">
                   <PlayCircle className="text-white w-16 h-16 drop-shadow-lg group-hover:text-brand-gold group-hover:scale-110 transition-all duration-300" />
                 </div>
               </div>
 
-              <div className="flex-grow">
-                <p className="text-slate-600 italic mb-6 leading-relaxed">&quot;{video.yorum}&quot;</p>
-                <h4 className="font-bold text-brand-dark flex items-center gap-2 border-t border-slate-100 pt-4">
-                  <div className="w-8 h-8 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-xs">
+              <div className="flex-grow flex flex-col">
+                <p className="text-slate-600 italic mb-6 leading-relaxed flex-grow">&quot;{video.yorum}&quot;</p>
+                <div className="flex items-center gap-4 border-t border-slate-100 pt-5 mt-auto">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-lg flex-shrink-0">
                     {video.isim.charAt(0)}
                   </div>
-                  {video.isim}
-                </h4>
+                  <div>
+                    <h4 className="font-bold text-brand-dark leading-tight mb-0.5">{video.isim}</h4>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-brand-gold uppercase tracking-wider">{video.meslek}</span>
+                    </div>
+                    {video.ogrenci ? (
+                      <p className="text-xs font-medium text-slate-500 mt-1">Öğrenci: <span className="text-slate-700">{video.ogrenci}</span></p>
+                    ) : null}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -213,7 +233,7 @@ export default function DeneyimlerPage() {
           {/* Sabit kapatma butonu */}
           <button 
             onClick={closeVideo}
-            className="absolute top-6 right-6 md:top-10 md:right-10 z-[110] w-12 h-12 bg-white/10 hover:bg-red-500 border border-white/20 rounded-full flex items-center justify-center text-white transition-colors shadow-2xl backdrop-blur-sm"
+            className="absolute top-6 right-6 md:top-10 md:right-10 z-[110] w-12 h-12 bg-white/10 hover:bg-red-500 border border-white/20 rounded-full flex items-center justify-center text-white shadow-2xl backdrop-blur-sm transition-all"
             title="Kapat"
             aria-label="Video modalını kapat"
           >
@@ -221,7 +241,7 @@ export default function DeneyimlerPage() {
           </button>
 
           <div 
-            className="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20"
+            className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20"
             onClick={(e) => e.stopPropagation()} 
           >
             <video 
