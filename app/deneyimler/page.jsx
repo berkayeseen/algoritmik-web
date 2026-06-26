@@ -22,7 +22,7 @@ const veliVideolari = [
     meslek: "Matematik Öğretmeni",
     ogrenci: "Kerem Tığraklı",
     yorum: "Oğlum Kerem'in bilgisayar ve yazılıma olan ilgisini fark edince, ortaokuldan eski öğrencim Berkay ile iletişime geçerek evimizde harika bir eğitim sürecine başladık. Kerem'in MIT App Inventor, Arduino ve Scratch gibi programlarla hem eğlenip hem de yeni şeyler öğrendiği bu süreçteki emekleri için Berkay hocamıza çok teşekkür ederiz.",
-    thumbnail: "/logo.jpeg",
+    thumbnail: "/kapak1.png",
     videoUrl: "https://www.youtube.com/embed/6e0D_lwNo3A?autoplay=1"
   },
   {
@@ -129,14 +129,14 @@ export default function DeneyimlerPage() {
                     preload="metadata"
                     muted
                     playsInline
-                    className="w-full h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
                   />
                 ) : (
                   <Image 
                     src={video.thumbnail} 
                     alt={video.isim}
                     fill
-                    className="object-contain p-4 opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                    className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
                   />
                 )}
                 <div className="absolute inset-0 flex items-center justify-center bg-brand-dark/10 group-hover:bg-brand-dark/30 transition-colors duration-300">
