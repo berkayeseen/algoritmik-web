@@ -18,12 +18,12 @@ const galeriFotograflari = [
 const veliVideolari = [
   {
     id: 1,
-    isim: "Sedat Tıraklı",
+    isim: "Sedat Tığraklı",
     meslek: "Matematik Öğretmeni",
-    ogrenci: "Kerem Tıraklı",
+    ogrenci: "Kerem Tığraklı",
     yorum: "Oğlum Kerem'in bilgisayar ve yazılıma olan ilgisini fark edince, ortaokuldan eski öğrencim Berkay ile iletişime geçerek evimizde harika bir eğitim sürecine başladık. Kerem'in MIT App Inventor, Arduino ve Scratch gibi programlarla hem eğlenip hem de yeni şeyler öğrendiği bu süreçteki emekleri için Berkay hocamıza çok teşekkür ederiz.",
-    thumbnail: "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "/videos/video1.mp4"
+    thumbnail: "https://img.youtube.com/vi/6e0D_lwNo3A/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/6e0D_lwNo3A?autoplay=1"
   },
   {
     id: 2,
@@ -123,9 +123,9 @@ export default function DeneyimlerPage() {
                   if (video.videoUrl) openVideo(video.videoUrl);
                 }}
               >
-                {video.videoUrl ? (
+                {video.thumbnail && video.thumbnail.endsWith('.mp4') ? (
                   <video 
-                    src={`${video.videoUrl}#t=0.1`}
+                    src={`${video.thumbnail}#t=0.1`}
                     preload="metadata"
                     muted
                     playsInline
@@ -241,17 +241,26 @@ export default function DeneyimlerPage() {
           </button>
 
           <div 
-            className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20"
+            className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/20 aspect-video"
             onClick={(e) => e.stopPropagation()} 
           >
-            <video 
-              src={activeVideo} 
-              controls 
-              autoPlay 
-              className="w-full aspect-video outline-none"
-            >
-              Tarayıcınız video oynatmayı desteklemiyor.
-            </video>
+            {activeVideo?.includes('youtube.com') ? (
+              <iframe 
+                src={activeVideo} 
+                className="w-full h-full outline-none" 
+                allow="autoplay; encrypted-media" 
+                allowFullScreen 
+              />
+            ) : (
+              <video 
+                src={activeVideo} 
+                controls 
+                autoPlay 
+                className="w-full h-full outline-none"
+              >
+                Tarayıcınız video oynatmayı desteklemiyor.
+              </video>
+            )}
           </div>
         </div>
       )}
