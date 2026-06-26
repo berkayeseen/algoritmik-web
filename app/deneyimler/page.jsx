@@ -22,7 +22,7 @@ const veliVideolari = [
     meslek: "Matematik Öğretmeni",
     ogrenci: "Kerem Tığraklı",
     yorum: "Oğlum Kerem'in bilgisayar ve yazılıma olan ilgisini fark edince, ortaokuldan eski öğrencim Berkay ile iletişime geçerek evimizde harika bir eğitim sürecine başladık. Kerem'in MIT App Inventor, Arduino ve Scratch gibi programlarla hem eğlenip hem de yeni şeyler öğrendiği bu süreçteki emekleri için Berkay hocamıza çok teşekkür ederiz.",
-    thumbnail: "https://img.youtube.com/vi/6e0D_lwNo3A/maxresdefault.jpg",
+    thumbnail: "/logo.jpeg",
     videoUrl: "https://www.youtube.com/embed/6e0D_lwNo3A?autoplay=1"
   },
   {
@@ -30,7 +30,7 @@ const veliVideolari = [
     isim: "Murat K.",
     meslek: "Veli",
     yorum: "Oğlumun dikkatini toplamak zordur fakat birebir ilginiz ve online dersteki enerjiniz sayesinde artık ders günlerini iple çekiyor.",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/logo.jpeg",
     videoUrl: "" // Örnek olması için boş bırakıldı, video gelince eklenecek
   },
   {
@@ -38,7 +38,7 @@ const veliVideolari = [
     isim: "Elif S.",
     meslek: "Veli",
     yorum: "Kendi hızında öğrenmesi, takıldığı yerde anında destek alabilmesi özel dersin en büyük avantajı oldu. Gelişimi harika.",
-    thumbnail: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80",
+    thumbnail: "/logo.jpeg",
     videoUrl: ""
   }
 ];
@@ -118,7 +118,7 @@ export default function DeneyimlerPage() {
               className="group bg-white rounded-3xl p-6 shadow-md border border-slate-200 hover:border-brand-gold/50 hover:shadow-2xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] flex flex-col hover:-translate-y-2"
             >
               <div 
-                className="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-800 mb-6 cursor-pointer"
+                className="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-50 border border-slate-100 mb-6 cursor-pointer"
                 onClick={() => {
                   if (video.videoUrl) openVideo(video.videoUrl);
                 }}
@@ -129,18 +129,18 @@ export default function DeneyimlerPage() {
                     preload="metadata"
                     muted
                     playsInline
-                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                    className="w-full h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
                   />
                 ) : (
                   <Image 
                     src={video.thumbnail} 
                     alt={video.isim}
                     fill
-                    className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
+                    className="object-contain p-4 opacity-90 group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] will-change-transform"
                   />
                 )}
-                <div className="absolute inset-0 flex items-center justify-center bg-brand-dark/20 group-hover:bg-brand-dark/40 transition-colors duration-300">
-                  <PlayCircle className="text-white w-16 h-16 drop-shadow-lg group-hover:text-brand-gold group-hover:scale-110 transition-all duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center bg-brand-dark/10 group-hover:bg-brand-dark/30 transition-colors duration-300">
+                  <PlayCircle className="text-brand-dark w-16 h-16 drop-shadow-md group-hover:text-brand-gold group-hover:scale-110 transition-all duration-300" />
                 </div>
               </div>
 

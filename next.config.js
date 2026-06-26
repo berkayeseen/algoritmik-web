@@ -16,8 +16,9 @@ const nextConfig = {
           `script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval'" : ""}`.trim(),
           "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
           "font-src 'self' https://fonts.gstatic.com",
-          "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com",
+          "img-src 'self' data: blob: https://images.unsplash.com https://*.unsplash.com https://img.youtube.com",
           "media-src 'self' https://www.w3schools.com",
+          "frame-src 'self' https://www.youtube.com",
           "connect-src 'self'",
           "frame-ancestors 'none'",
           "base-uri 'self'",
@@ -106,6 +107,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
       },
     ],
     // WebP/AVIF formatlarına otomatik dönüşüm (LCP iyileştirmesi)
