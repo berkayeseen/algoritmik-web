@@ -101,8 +101,14 @@ export default function BenKimim() {
                   width={800}
                   height={1000}
                   priority={true}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110"
                 />
+                
+                {/* Alt Gölge ve İsim/Unvan */}
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/10 to-transparent opacity-90 flex flex-col justify-end p-8">
+                  <h3 className="text-white font-extrabold text-2xl tracking-tight mb-1">Berkay Esen</h3>
+                  <p className="text-brand-gold font-semibold text-sm uppercase tracking-wider">Yazılım Mühendisi & Eğitmen</p>
+                </div>
               </div>
             </div>
 
@@ -115,7 +121,7 @@ export default function BenKimim() {
               
               <div className="text-lg text-slate-600 leading-relaxed space-y-4">
                 <p>
-                  Merhaba, ben <strong>Berkay Esen</strong>. Teknolojiye olan tutkum lise yıllarında, 2019 yılında <strong>Buca Zübeyde Hanım Mesleki ve Teknik Anadolu Lisesi</strong>'nde başladı. Robotik çalışmalarına ve kodlamaya ilk adımlarımı burada atarken, aynı zamanda okulun Robotik Kulübü Başkanlığını üstlendim ve çeşitli web projeleri geliştirdim.
+                  Merhaba, ben <strong>Berkay Esen</strong>. Yazılım ve robotik dünyasıyla tanışmam lise yıllarıma, <strong>Buca Zübeyde Hanım Mesleki ve Teknik Anadolu Lisesi</strong>'nde okuduğum döneme dayanıyor. Kodlamanın temel mantığını burada kavrarken, aynı zamanda okulun Robotik Kulübü Başkanlığını üstlenerek aktif projeler geliştirme tecrübesi edindim.
                 </p>
                 <p>
                   Öğrencilik dönemimde <strong>Karabük Üniversitesi, Yıldız Teknik Üniversitesi, İYTE</strong> ve MEB'in düzenlediği <strong>Uluslararası Sivas Robotik Yarışması</strong> gibi birçok prestijli organizasyonda yarışarak sahada aktif tecrübe kazandım.
