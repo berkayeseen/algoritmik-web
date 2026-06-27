@@ -46,17 +46,17 @@ export default function BenKimim() {
     { 
       icon: Target, 
       baslik: "İlgi Alanlarından Beslenen Bir Müfredat", 
-      metin: "Öğrenme sürecini çocuğunuzun sevdiği oyunlar ve merak ettiği konular üzerine inşa ediyoruz. Önceden ezberlenmiş kalıplar yerine, onun hızına ve ilgisine saygı duyan esnek bir rotada ilerliyoruz." 
+      metin: "Öğrenme sürecini çocuğunuzun sevdiği oyunlar ve merak ettiği konular üzerine inşa ediyorum. Önceden ezberlenmiş kalıplar yerine, onun hızına ve ilgisine saygı duyan esnek bir rotada ilerliyorum." 
     },
     { 
       icon: Code, 
       baslik: "Teori Değil, Pratik Üzerinden Öğrenme", 
-      metin: "İlk dersten itibaren sadece dinleyen değil, klavyeye dokunan ve hata yapmaktan çekinmeyen bir yaklaşım benimsiyoruz. Kendi projelerimizi üretirken yazılımın mantığını ezberlemeden, yaşayarak kavrıyoruz." 
+      metin: "İlk dersten itibaren sadece dinleyen değil, klavyeye dokunan ve hata yapmaktan çekinmeyen bir yaklaşım benimsiyorum. Öğrencilerimle projeler üretirken yazılımın mantığını ezberlemeden, yaşayarak kavrıyoruz." 
     },
     { 
       icon: HeartHandshake, 
       baslik: "Açık İletişim ve Sürekli Geri Bildirim", 
-      metin: "Eğitim sürecini kapalı kapılar ardında bırakmıyoruz. 'Bugün neleri başardık, nerelerde zorlandık?' gibi süreçleri karmaşık raporlarla değil; sizinle her dersin sonunda samimi, anlaşılır ve şeffaf bir dille paylaşıyoruz." 
+      metin: "Eğitim sürecini kapalı kapılar ardında bırakmıyorum. 'Bugün neleri başardık, nerelerde zorlandık?' gibi süreçleri karmaşık raporlarla değil; sizinle her dersin sonunda samimi, anlaşılır ve şeffaf bir dille paylaşıyorum." 
     },
   ];
 
@@ -115,7 +115,7 @@ export default function BenKimim() {
               
               <div className="text-lg text-slate-600 leading-relaxed space-y-4">
                 <p>
-                  Merhaba ben <strong>Berkay Esen</strong>. Teknolojiye olan tutkum lise yıllarında, 2019 yılında <strong>Buca Zübeyde Hanım Mesleki ve Teknik Anadolu Lisesi</strong>'nde başladı. Robotik çalışmalarına ve kodlamaya ilk adımlarımı burada atarken, aynı zamanda okulun Robotik Kulübü Başkanlığını üstlendim ve çeşitli web projeleri geliştirdim.
+                  Merhaba, ben <strong>Berkay Esen</strong>. Teknolojiye olan tutkum lise yıllarında, 2019 yılında <strong>Buca Zübeyde Hanım Mesleki ve Teknik Anadolu Lisesi</strong>'nde başladı. Robotik çalışmalarına ve kodlamaya ilk adımlarımı burada atarken, aynı zamanda okulun Robotik Kulübü Başkanlığını üstlendim ve çeşitli web projeleri geliştirdim.
                 </p>
                 <p>
                   Öğrencilik dönemimde <strong>Karabük Üniversitesi, Yıldız Teknik Üniversitesi, İYTE</strong> ve MEB'in düzenlediği <strong>Uluslararası Sivas Robotik Yarışması</strong> gibi birçok prestijli organizasyonda yarışarak sahada aktif tecrübe kazandım.

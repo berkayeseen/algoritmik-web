@@ -99,7 +99,7 @@ export default function EgitimlerListesi() {
               </div>
             </div>
             <p className="text-slate-600 mb-6 leading-relaxed">
-              Bu eğitim modelinde <strong>eğitmen doğrudan öğrencinin evine gelir.</strong> Çocuğunuzun alıştığı çalışma ortamında, yol ve trafik derdi olmadan yan yana işlediğimiz bir süreçtir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
+              Bu eğitim modelinde <strong>doğrudan öğrencinin evine geliyorum.</strong> Çocuğunuzun alıştığı çalışma ortamında, yol ve trafik derdi olmadan yan yana işlediğimiz bir süreçtir. Donanım ve yazılım eğitimlerinin tamamı bu modelde uygulanabilir.
             </p>
             <ul className="space-y-4 mt-auto">
               <li className="flex items-start gap-3">
@@ -150,7 +150,7 @@ export default function EgitimlerListesi() {
               <li className="flex items-start gap-3 bg-red-50 p-3 rounded-xl border border-red-100">
                 <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-red-800">
-                  Sadece fiziksel devre kurmayı gerektirdiği için <strong>Arduino projeleri</strong> online ortamda verilmemektedir.
+                  Online eğitimlerimizde <strong>Arduino'ya Giriş</strong> dersleri dijital simülasyonlar (Tinkercad vb.) üzerinden işlenir. Fiziksel devreler gerektirdiği için <strong>Arduino Proje Geliştirme</strong> dersleri sadece yüz yüze eğitimde verilmektedir.
                 </span>
               </li>
             </ul>
@@ -190,7 +190,7 @@ export default function EgitimlerListesi() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Beklemek ve Zaman Kaybı Yok</h3>
                 <p className="text-slate-200 text-base leading-relaxed">
-                  Kalabalık online sınıflarda öğretmen diğer öğrencilerle ilgilenirken, takılan bir öğrenci dakikalarca beklemek zorunda kalır. Bizim modelimizde ise başkasını bekleme veya öğretmene ulaşamama sorunu yoktur; zaman kaybı yaşanmaz.
+                  Kalabalık online sınıflarda öğretmen diğer öğrencilerle ilgilenirken, takılan bir öğrenci dakikalarca beklemek zorunda kalır. Bizim modelimizde ise başkasını bekleme veya bana ulaşamama sorunu yoktur; zaman kaybı yaşanmaz.
                 </p>
               </div>
             </div>
@@ -211,8 +211,8 @@ export default function EgitimlerListesi() {
                 const egitim = getEgitimBySlug(slug);
                 if (!egitim) return null;
                 
-                // Arduino dersleri için küçük bir online uyarı rozeti
-                const isArduino = slug.includes('arduino');
+                // Sadece ileri seviye Arduino projeleri için yüz yüze uyarısı
+                const isAdvancedArduino = slug === 'arduino-robotik-projeler';
 
                 return (
                   <div 
@@ -220,8 +220,8 @@ export default function EgitimlerListesi() {
                     className="group bg-white rounded-3xl p-8 shadow-sm border border-slate-200 hover:border-brand-gold/50 hover:shadow-2xl transition-all duration-200 ease-in-out flex flex-col hover:-translate-y-2 relative"
                     style={{ willChange: 'transform, box-shadow' }}
                   >
-                    {/* Arduino Uyarı Rozeti */}
-                    {isArduino && (
+                    {/* Yüz Yüze Uyarı Rozeti */}
+                    {isAdvancedArduino && (
                       <div className="absolute -top-3 -right-3 bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full border border-red-200 shadow-sm flex items-center gap-1">
                         <AlertCircle size={12} /> Sadece Yüz Yüze
                       </div>
